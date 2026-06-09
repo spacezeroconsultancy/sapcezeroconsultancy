@@ -1,0 +1,137 @@
+:root{
+--primary:#002B5B;
+--gold:#D4AF37;
+--white:#ffffff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Hind Siliguri',sans-serif;
+}
+
+body{
+background:#fff;
+color:#222;
+}
+
+header{
+background:var(--primary);
+padding:15px;
+}
+
+.container{
+width:90%;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo img{
+height:60px;
+}
+
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+.hero{
+height:85vh;
+background:url('../images/banner1.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.overlay{
+text-align:center;
+background:rgba(0,0,0,.5);
+padding:40px;
+color:white;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.buttons{
+margin-top:25px;
+}
+
+.btn{
+padding:12px 25px;
+background:var(--primary);
+color:white;
+text-decoration:none;
+border-radius:5px;
+margin:5px;
+display:inline-block;
+}
+
+.btn-gold{
+background:var(--gold);
+color:black;
+}
+
+.services{
+padding:60px 20px;
+}
+
+.services h2{
+text-align:center;
+margin-bottom:30px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+padding:30px;
+border:1px solid #eee;
+text-align:center;
+box-shadow:0 0 10px rgba(0,0,0,.08);
+}
+
+.card h3{
+margin:15px 0;
+}
+
+footer{
+background:#002B5B;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:50px;
+}
+
+@media(max-width:768px){
+
+.container{
+flex-direction:column;
+}
+
+nav ul{
+flex-direction:column;
+text-align:center;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+}

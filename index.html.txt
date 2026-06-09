@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Space Zero Visa Consultancy</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+<div class="container">
+
+<div class="logo">
+<img src="assets/images/logo.png" alt="Space Zero">
+</div>
+
+<nav>
+<ul>
+<li><a href="index.html">হোম</a></li>
+<li><a href="about.html">আমাদের সম্পর্কে</a></li>
+<li><a href="tourist/thailand.html">ট্যুরিস্ট ভিসা</a></li>
+<li><a href="visit/canada.html">ভিজিট ভিসা</a></li>
+<li><a href="workpermit/fiji.html">ওয়ার্কপারমিট</a></li>
+<li><a href="passport/index.html">পাসপোর্ট</a></li>
+<li><a href="nid/index.html">এনআইডি</a></li>
+<li><a href="contact.html">যোগাযোগ</a></li>
+</ul>
+</nav>
+
+</div>
+</header>
+
+<section class="hero">
+
+<div class="overlay">
+
+<h1>Space Zero Visa Consultancy</h1>
+
+<p>
+পাসপোর্ট, এনআইডি, ট্যুরিস্ট ভিসা, ভিজিট ভিসা ও ওয়ার্ক পারমিট বিষয়ে
+পেশাদার সহায়তা।
+</p>
+
+<div class="buttons">
+
+<a href="tel:+8801711259968" class="btn">
+📞 কল করুন
+</a>
+
+<a href="https://wa.me/8801711259968"
+class="btn btn-gold">
+💬 WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="services">
+
+<h2>আমাদের সেবাসমূহ</h2>
+
+<div class="grid">
+
+<div class="card">
+🛂
+<h3>পাসপোর্ট সেবা</h3>
+<a href="passport/index.html">বিস্তারিত</a>
+</div>
+
+<div class="card">
+🪪
+<h3>এনআইডি সেবা</h3>
+<a href="nid/index.html">বিস্তারিত</a>
+</div>
+
+<div class="card">
+✈️
+<h3>ট্যুরিস্ট ভিসা</h3>
+<a href="tourist/thailand.html">বিস্তারিত</a>
+</div>
+
+<div class="card">
+🌍
+<h3>ভিজিট ভিসা</h3>
+<a href="visit/canada.html">বিস্তারিত</a>
+</div>
+
+<div class="card">
+💼
+<h3>ওয়ার্কপারমিট ভিসা</h3>
+<a href="workpermit/fiji.html">বিস্তারিত</a>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Space Zero Visa Consultancy
+</p>
+
+<p>
+📞 01711-259968
+</p>
+
+</footer>
+
+</body>
+</html>
