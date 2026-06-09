@@ -1,9 +1,408 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width,initial-scale=1'>
-<link rel="stylesheet" href="style.css">
-<body><header><nav>
-<a href='index.html'>Home</a>
-<a href='about.html'>About</a>
-<a href='contact.html'>Contact</a>
-</nav></header><div class='container'><h1>আমাদের সম্পর্কে</h1><p>Professional visa, passport and NID consultancy.</p></div>
-<footer>Space Zero Visa Consultancy</footer></body></html>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Zero Visa Consultancy | হোম</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #002B5B; /* Navy Blue */
+            --secondary: #D4AF37; /* Gold */
+            --bg-light: #F8FAFC;
+            --text-dark: #0F172A;
+            --text-muted: #475569;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        /* Top Navigation Bar */
+        nav {
+            background-color: var(--primary);
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 55px;
+            object-fit: contain;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .menu a:hover {
+            color: var(--secondary);
+        }
+
+        /* Dropdown Menu Layout */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: var(--white);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            list-style: none;
+            display: none;
+            min-width: 220px;
+            border-top: 3px solid var(--secondary);
+        }
+
+        .dropdown-menu a {
+            color: var(--text-dark);
+            padding: 12px 20px;
+            display: block;
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: var(--bg-light);
+            color: var(--primary);
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Hero Banner Section */
+        .hero {
+            background: linear-gradient(rgba(0, 43, 91, 0.85), rgba(0, 43, 91, 0.85)), url('banner1.jpg') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 120px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-call { background-color: var(--secondary); color: var(--primary); }
+        .btn-whatsapp { background-color: #25D366; color: var(--white); }
+
+        /* Core Services Section */
+        .section-padding {
+            padding: 70px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 45px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 3px;
+            background-color: var(--secondary);
+            margin: 10px auto 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid #E2E8F0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .btn-details {
+            margin-top: 15px;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 8px 15px;
+            font-size: 0.95rem;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us {
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 40px;
+        }
+
+        .why-choose-us h2 { color: var(--secondary); text-align: center; margin-bottom: 30px; }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            list-style: none;
+        }
+
+        .features-list li {
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Popular Destinations Framework */
+        .countries-box {
+            text-align: center;
+            background: var(--white);
+            padding: 40px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .flag-grid {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            font-size: 2rem;
+        }
+
+        .flag-item {
+            background: var(--bg-light);
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 1px solid #E2E8F0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* Footer Area */
+        footer {
+            background-color: var(--primary);
+            color: #94A3B8;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 60px;
+            border-top: 3px solid var(--secondary);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 15px; }
+            .menu { flex-direction: column; width: 100%; text-align: center; gap: 10px; }
+            .dropdown-menu { position: static; box-shadow: none; width: 100%; background: #001F42; }
+            .dropdown-menu a { color: #CBD5E1; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="Space Zero Visa Consultancy">
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">হোম</a></li>
+                <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                <li class="dropdown">
+                    <a href="#">ভিসা সার্ভিসসমূহ ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="singapore.html">🇸🇬 সিঙ্গাপুর ট্যুরিস্ট ভিসা</a></li>
+                        <li><a href="malaysia.html">🇲🇾 মালয়েশিয়া ট্যুরিস্ট ভিসা</a></li>
+                        <li><a href="thailand.html">🇹🇭 থাইল্যান্ড ট্যুরিস্ট ভিসা</a></li>
+                        <li><a href="india.html">🇮🇳 ইন্ডিয়া ট্যুরিস্ট ভিসা</a></li>
+                        <li><a href="srilanka.html">🇱🇰 শ্রীলঙ্কা ট্যুরিস্ট ETA</a></li>
+                        <li><a href="canada.html">🇨🇦 কানাডা ভিজিট ভিসা</a></li>
+                        <li><a href="australia.html">🇦🇺 অস্ট্রেলিয়া ভিজিট ভিসা</a></li>
+                    </ul>
+                </li>
+                <li><a href="workpermit.html">ওয়ার্ক পারমিট</a></li>
+                <li><a href="passport.html">পাসপোর্ট সেবা</a></li>
+                <li><a href="nid.html">এনআইডি সেবা</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">যোগাযোগ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>স্পেস জিরো ভিসা কনসালটেন্সি</h1>
+        <p>ভিসা প্রসেসিং, পাসপোর্ট এবং এনআইডি সংক্রান্ত জটিলতা দূর করে আপনার বৈশ্বিক যাত্রাকে সহজ ও ঝামেলামুক্ত করাই আমাদের একমাত্র লক্ষ্য।</p>
+        <div class="hero-buttons">
+            <a href="tel:+8801711259968" class="btn btn-call">📞 সরাসরি কল করুন</a>
+            <a href="https://wa.me/8801711259968" class="btn btn-whatsapp" target="_blank">💬 হোয়াটসঅ্যাপ মেসেজ</a>
+        </div>
+    </header>
+
+    <main class="section-padding">
+        <h2 class="section-title">আমাদের সেবাসমূহ</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div>
+                    <div class="service-icon">🛂</div>
+                    <h3>পাসপোর্ট সেবা</h3>
+                    <p>নতুন পাসপোর্ট আবেদন, রি-ইস্যু ও নবায়ন প্রক্রিয়ার নির্ভুল ও দ্রুত সমাধান।</p>
+                </div>
+                <a href="passport.html" class="btn-details">বিস্তারিত দেখুন</a>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <div class="service-icon">🪪</div>
+                    <h3>এনআইডি সেবা</h3>
+                    <p>জাতীয় পরিচয়পত্রের নাম, জন্মতারিখ, এবং বিভিন্ন তথ্য সংশোধন বা পরিবর্তন সহায়তা।</p>
+                </div>
+                <a href="nid.html" class="btn-details">বিস্তারিত দেখুন</a>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <div class="service-icon">✈️</div>
+                    <h3>ট্যুরিস্ট ভিসা</h3>
+                    <p>থাইল্যান্ড, সিঙ্গাপুর, মালয়েশিয়া এবং ভারতের নির্ভরযোগ্য ভিসা ফাইল প্রসেসিং।</p>
+                </div>
+                <a href="thailand.html" class="btn-details">বিস্তারিত দেখুন</a>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <div class="service-icon">🌏</div>
+                    <h3>ভিজিট ভিসা</h3>
+                    <p>কানাডা এবং অস্ট্রেলিয়ার মতো উন্নত দেশে ভ্রমণের জন্য অভিজ্ঞ গাইডলাইন প্যাকেজ।</p>
+                </div>
+                <a href="canada.html" class="btn-details">বিস্তারিত দেখুন</a>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <div class="service-icon">👷‍♂️</div>
+                    <h3>ওয়ার্ক পারমিট</h3>
+                    <p>ফিজি এবং মলদোভা সহ ইউরোপের বিভিন্ন দেশে কাজের উদ্দেশ্যে ফাইল প্রসেসিং গাইডলাইন।</p>
+                </div>
+                <a href="workpermit.html" class="btn-details">বিস্তারিত দেখুন</a>
+            </div>
+        </div>
+
+        <div class="why-choose-us">
+            <h2>কেন আমাদের বেছে নেবেন?</h2>
+            <ul class="features-list">
+                <li>✓ অভিজ্ঞ ভিসা কনসালট্যান্ট</li>
+                <li>✓ স্বচ্ছ ও নির্ভুল তথ্য</li>
+                <li>✓ দ্রুত কাস্টমার সাপোর্ট</li>
+                <li>✓ নিখুঁত ডকুমেন্ট চেকিং</li>
+                <li>✓ সার্বক্ষণিক হোয়াটসঅ্যাপ ব্যাকআপ</li>
+                <li>✓ নির্ভরযোগ্য ও পেশাদার সেবা</li>
+            </ul>
+        </div>
+
+        <div class="countries-box" style="margin-top: 50px;">
+            <h2 class="section-title">জনপ্রিয় ভিসা গন্তব্যসমূহ</h2>
+            <div class="flag-grid">
+                <span class="flag-item">🇸🇬 সিঙ্গাপুর</span>
+                <span class="flag-item">🇲🇾 মালয়েশিয়া</span>
+                <span class="flag-item">🇹🇭 থাইল্যান্ড</span>
+                <span class="flag-item">🇮🇳 ইন্ডিয়া</span>
+                <span class="flag-item">🇦🇺 অস্ট্রেলিয়া</span>
+                <span class="flag-item">🇨🇦 কানাডা</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Space Zero Visa Consultancy. All Rights Reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 5px;">📍 ৩০২-৩০৩, রোজ ভিউ কমপ্লেক্স, ৩য় তলা, উপশহর, সিলেট।</p>
+    </footer>
+
+</body>
+</html>
